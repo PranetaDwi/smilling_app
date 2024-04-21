@@ -549,8 +549,6 @@
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/button_rekomendasi"/>
 
-
-
         </LinearLayout>
 
     </ScrollView>
