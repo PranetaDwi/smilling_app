@@ -1,4 +1,4 @@
-package com.example.smilling_app.views
+package com.example.smilling_app.auth
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

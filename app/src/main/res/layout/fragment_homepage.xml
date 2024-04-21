@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.HomepageFragment"
+    android:background="@drawable/background_2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:id="@+id/welcome_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon_user_statis"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_user_photo_profile"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello"
+                    android:fontFamily="@font/poppins_medium_italic"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Praneta Dwi Indarti"
+                    android:fontFamily="@font/poppins_bold_italic"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/welcome_greeting_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/welcome_greeting"
+            android:layout_marginTop="20dp"
+            android:text="Selamat data di aplikasi"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textSize="15sp"/>
+
+        <LinearLayout
+            android:layout_below="@id/welcome_greeting_2"
+            android:id="@+id/welcome_greeting_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/maskot_home"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SMILING"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_extra_bold_italic"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To Create a Smile for Our Farmer"
+                    android:fontFamily="@font/poppins_bold_italic"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@id/welcome_greeting_3"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rekomendasi Pupuk"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:textSize="17sp"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/button_next"
+                    android:layout_marginLeft="200dp"/>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</FrameLayout>

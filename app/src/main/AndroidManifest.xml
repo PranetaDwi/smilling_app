@@ -13,22 +13,26 @@
         android:theme="@style/Theme.Smilling_app"
         tools:targetApi="31">
         <activity
-            android:name=".views.RegisterActivity"
+            android:name=".views.FragmentActivity"
             android:exported="false" />
         <activity
-            android:name=".views.LoginActivity"
+            android:name=".auth.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".views.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>
