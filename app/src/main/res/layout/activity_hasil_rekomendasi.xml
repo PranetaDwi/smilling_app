@@ -45,50 +45,56 @@
         android:fontFamily="@font/poppins_extra_bold"
         android:textSize="20sp"/>
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/card_rekomendasi_utama"
-        android:layout_below="@+id/text_rekomendasi_utama"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="20dp">
+        android:layout_below="@+id/text_rekomendasi_utama">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/picture_rec1"/>
+            android:layout_height="150dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_margin="10dp"
-                android:layout_gravity="center_vertical">
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pupuk Merah"
-                    android:fontFamily="@font/poppins_extra_bold"
-                    android:textSize="18dp"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/picture_rec1"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Pupuk ini merupakan pupuk serba guna"
-                    android:fontFamily="@font/poppins_light"
-                    android:textSize="13dp"/>
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pupuk Merah"
+                        android:fontFamily="@font/poppins_extra_bold"
+                        android:textSize="18dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pupuk ini merupakan pupuk serba guna"
+                        android:fontFamily="@font/poppins_light"
+                        android:textSize="13dp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/text_rekomendasi_cadangan"
@@ -100,6 +106,15 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_medium"
         android:textSize="20sp"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_below="@+id/text_rekomendasi_utama"
+        android:layout_height="50dp"
+        android:src="@drawable/rank_1"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="77dp"
+        android:layout_alignParentTop="true"/>
 
     <LinearLayout
         android:id="@+id/card_rekomendasi_cadangan_baris1"
@@ -144,8 +159,6 @@
 
             </LinearLayout>
 
-
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -188,6 +201,22 @@
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/card_rekomendasi_utama"
+        android:src="@drawable/rank_2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="35dp"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/card_rekomendasi_utama"
+        android:src="@drawable/rank_3"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="35dp"/>
 
     <LinearLayout
         android:id="@+id/card_rekomendasi_cadangan_baris2"
@@ -276,5 +305,21 @@
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/card_rekomendasi_utama"
+        android:src="@drawable/rank_4"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="255dp"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/card_rekomendasi_utama"
+        android:src="@drawable/rank_5"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="255dp"/>
 
 </RelativeLayout>
