@@ -126,13 +126,49 @@
                     android:textSize="17sp"/>
 
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="330dp"
+                    android:layout_height="70dp"
+                    app:cardElevation="5dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="10dp">
+
+                    <Spinner
+                        android:id="@+id/komoditasInputDropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="330dp"
+                    android:layout_height="70dp"
+                    app:cardElevation="5dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="10dp">
+
+                    <Spinner
+                        android:id="@+id/tipeInputDropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/button_next"
-                    android:layout_marginLeft="200dp"/>
-
-
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="2dp"/>
 
             </LinearLayout>
 
