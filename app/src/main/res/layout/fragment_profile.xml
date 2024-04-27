@@ -3,12 +3,334 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profile.ProfileFragment">
+    tools:context=".profile.ProfileFragment"
+    android:background="@drawable/background_2">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/user_photo_profile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/icon_user_photo_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_1"
+            android:layout_width="360dp"
+            android:layout_height="330dp"
+            android:layout_below="@id/user_photo_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp">
+
+                <ImageView
+                    android:id="@+id/icon_user_profile"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/icon_user_profile"/>
+
+                <TextView
+                    android:id="@+id/nameProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/icon_user_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Handayani"
+                    android:fontFamily="@font/poppins_extra_bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/icon_user_profile"
+                    android:layout_height="2dp"
+                    android:background="@color/platinum" />
+
+                <ImageView
+                    android:id="@+id/icon_email_profile"
+                    android:layout_below="@id/line1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/icon_email_profile"/>
+
+                <TextView
+                    android:id="@+id/emailProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/icon_email_profile"
+                    android:layout_below="@id/line1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Handayani@mail.com"
+                    android:fontFamily="@font/poppins_extra_bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/icon_email_profile"
+                    android:layout_height="2dp"
+                    android:background="@color/platinum"
+                    />
+
+                <ImageView
+                    android:id="@+id/icon_phone_profile"
+                    android:layout_below="@id/line2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/icon_phone_profile"
+                    />
+
+                <TextView
+                    android:id="@+id/phoneProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/icon_phone_profile"
+                    android:layout_below="@id/line2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="085877573513"
+                    android:fontFamily="@font/poppins_extra_bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/icon_phone_profile"
+                    android:layout_height="2dp"
+                    android:background="@color/platinum" />
+
+                <ImageView
+                    android:id="@+id/icon_expand_profile"
+                    android:layout_below="@id/line3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/icon_expand_profile"
+                    />
+
+                <TextView
+                    android:id="@+id/expandProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/icon_expand_profile"
+                    android:layout_below="@id/line3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="085877573513"
+                    android:fontFamily="@font/poppins_extra_bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:id="@+id/line4"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/icon_expand_profile"
+                    android:layout_height="2dp"
+                    android:background="@color/platinum" />
+
+                <ImageView
+                    android:id="@+id/icon_address_profile"
+                    android:layout_below="@id/line4"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/icon_address"
+                    />
+
+                <TextView
+                    android:id="@+id/addressProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/icon_address_profile"
+                    android:layout_below="@id/line4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="085877573513"
+                    android:fontFamily="@font/poppins_extra_bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_1"
+            android:layout_margin="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_edit"/>
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Edit Profile"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="15dp"
+                        android:clickable="true"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_forward"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="100dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/icon_user_profile"
+                    android:layout_height="2dp"
+                    android:background="@color/platinum" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_setting"/>
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Setting Tools"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="15dp"
+                        android:clickable="true"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_forward"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="100dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/icon_user_profile"
+                    android:layout_height="2dp"
+                    android:background="@color/platinum" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_help"/>
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Helps"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="15dp"
+                        android:clickable="true"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_forward"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="100dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/icon_user_profile"
+                    android:layout_height="2dp"
+                    android:background="@color/platinum" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_logout"/>
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Logout"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="15dp"
+                        android:clickable="true"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_forward"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="100dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/icon_user_profile"
+                    android:layout_height="2dp"
+                    android:background="@color/platinum" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
 
 </FrameLayout>

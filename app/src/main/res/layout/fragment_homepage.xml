@@ -106,6 +106,54 @@
 
         <androidx.cardview.widget.CardView
             android:layout_below="@id/welcome_greeting_3"
+            android:id="@+id/card_1"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_bluetooth"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sensor terhubung"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SMILING0868"
+                    android:fontFamily="@font/poppins_extra_bold"
+                    android:textSize="20dp"
+                    android:textColor="@color/may_green"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@id/card_1"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             app:cardElevation="10dp"
@@ -118,12 +166,26 @@
                 android:orientation="vertical"
                 android:layout_margin="15dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rekomendasi Pupuk"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:textSize="17sp"/>
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_choice"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pemilihan Jenis"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
 
 
                 <androidx.cardview.widget.CardView

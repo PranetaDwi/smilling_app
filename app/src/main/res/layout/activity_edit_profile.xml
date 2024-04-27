@@ -1,10 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profile.EditProfileActivity">
+    tools:context=".profile.EditProfileActivity"
+    android:background="@drawable/background_1"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_back"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeColor="@color/green_lizard"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/black"
+        android:hint="Name">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameInput"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/icon_user_profile"
+            android:drawablePadding="10dp"
+            android:background="@drawable/bg_input_2"
+            android:textStyle="bold"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeColor="@color/green_lizard"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/black"
+        android:hint="Email">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEditInput"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/icon_email_profile"
+            android:drawablePadding="10dp"
+            android:background="@drawable/bg_input_2"
+            android:textStyle="bold"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeColor="@color/green_lizard"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/black"
+        android:hint="Phone">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneEditInput"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/icon_phone_profile"
+            android:drawablePadding="10dp"
+            android:background="@drawable/bg_input_2"
+            android:textStyle="bold"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeColor="@color/green_lizard"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/black"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/white"
+        android:hint="Password">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditInput"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/icon_password_profile"
+            android:drawablePadding="10dp"
+            android:background="@drawable/bg_input_2"
+            android:textStyle="bold"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeColor="@color/green_lizard"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/black"
+        android:hint="Luas">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/luasEditInput"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/icon_expand_profile"
+            android:drawablePadding="10dp"
+            android:background="@drawable/bg_input_2"
+            android:textStyle="bold"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeColor="@color/green_lizard"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/black"
+        android:hint="Alamat">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/alamatEditInput"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/icon_address"
+            android:drawablePadding="10dp"
+            android:background="@drawable/bg_input_2"
+            android:textStyle="bold"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="20dp"
+        android:id="@+id/saveEdit"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/may_green"
+        android:text="Save"
+        android:fontFamily="@font/poppins_extra_bold"
+        android:textSize="20sp"/>
+
+</LinearLayout>
