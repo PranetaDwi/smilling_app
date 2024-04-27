@@ -3,48 +3,364 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="180dp"
-        android:layout_height="220dp"
-        app:cardElevation="5dp"
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_margin="5dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            app:cardElevation="3dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
 
-            <ImageView
-                android:id="@+id/gambarPupuk"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@drawable/picture_rec2"/>
-
-            <TextView
-                android:id="@+id/titlePupuk"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pupuk Merah"
-                android:fontFamily="@font/poppins_extra_bold"
-                android:textSize="15dp"
-                />
+                android:layout_margin="10dp">
 
-            <TextView
-                android:id="@+id/deskripsiPupuk"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pupuk ini merupakan pupuk serba guna"
-                android:fontFamily="@font/poppins_light"
-                android:textSize="10dp"/>
+                <ImageView
+                    android:id="@+id/icon_calendar"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_calendar"
+                    />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tanggalCek"
+                    android:layout_toRightOf="@+id/icon_calendar"
+                    android:text="2025-02-09"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="16sp"/>
 
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/icon_time"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_timespan"
+                    android:layout_toLeftOf="@id/waktuCek"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/waktuCek"
+                    android:layout_alignParentRight="true"
+                    android:text="13:20:15"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:id="@+id/row_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_below="@id/waktuCek"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="110dp"
+                        android:layout_height="80dp"
+                        android:backgroundTint="@color/may_green"
+                        android:layout_marginLeft="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="13dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/icon_unsur_nitrogen"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nitrogen"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="45dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/white">
+
+                            <TextView
+                                android:id="@+id/dataNitrogen"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="90 ppm"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/poppins_extra_bold"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="110dp"
+                        android:layout_height="80dp"
+                        android:backgroundTint="@color/may_green"
+                        android:layout_marginLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="13dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/icon_unsur_fosfor"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fosfor"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="45dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/white">
+
+                            <TextView
+                                android:id="@+id/dataFosfor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="90 ppm"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/poppins_extra_bold"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="110dp"
+                        android:layout_height="80dp"
+                        android:backgroundTint="@color/may_green"
+                        android:layout_marginLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="13dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/icon_unsur_kalium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kalium"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="45dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/white">
+
+                            <TextView
+                                android:id="@+id/dataKalium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="90 ppm"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/poppins_extra_bold"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/row_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_below="@id/row_1"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="110dp"
+                        android:layout_height="80dp"
+                        android:backgroundTint="@color/may_green"
+                        android:layout_marginLeft="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="13dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/icon_unsur_ph"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="pH"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="45dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/white">
+
+                            <TextView
+                                android:id="@+id/dataPh"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="90"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/poppins_extra_bold"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="80dp"
+                        android:backgroundTint="@color/may_green"
+                        android:layout_marginLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="13dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/icon_unsur_kelembaban"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kelembaban"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="45dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/white">
+
+                            <TextView
+                                android:id="@+id/dataKelembaban"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="90 ppm"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/poppins_extra_bold"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/icon_sensor"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_device"
+                    android:layout_below="@id/row_2"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/row_2"
+                    android:id="@+id/deviceCek"
+                    android:layout_toRightOf="@+id/icon_sensor"
+                    android:text="SMILE103949-3"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
 </LinearLayout>
