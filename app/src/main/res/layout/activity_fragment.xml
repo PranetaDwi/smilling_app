@@ -26,9 +26,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        android:background="@drawable/background_3_bottom_navigation"
-        app:itemTextColor="@color/white"
-        app:itemIconTint="@color/white"
+        android:background="@color/white"
+        app:itemTextColor="@color/may_green"
+        app:itemIconTint="@color/may_green"
         app:menu="@menu/menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>

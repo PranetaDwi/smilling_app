@@ -26,13 +26,10 @@
             android:exported="false" />
         <activity
             android:name=".home.HasilRekomendasiActivity"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".home.RekomendasiActivity"-->
-<!--            android:exported="false" />-->
+            android:exported="false"/>
         <activity
             android:name=".views.FragmentActivity"
-            android:exported="false" />
+            android:exported="true"/>
         <activity
             android:name=".auth.RegisterActivity"
             android:exported="false" />
@@ -44,7 +41,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

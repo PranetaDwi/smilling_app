@@ -9,6 +9,7 @@
     android:background="@drawable/background_1">
 
     <LinearLayout
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -43,8 +44,8 @@
         android:id="@+id/card_regidter"
         android:layout_below="@+id/maskot_register"
         android:layout_marginTop="10dp"
-        android:layout_width="350dp"
-        android:layout_height="420dp"
+        android:layout_width="370dp"
+        android:layout_height="455dp"
         android:layout_gravity="center_horizontal"
         app:cardPreventCornerOverlap="true"
         app:cardCornerRadius="20dp"
@@ -77,8 +78,8 @@
                 android:hint="Name">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/nameInput"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
+                    android:layout_width="330dp"
+                    android:layout_height="60dp"
                     android:textSize="20sp"
                     android:drawableStart="@drawable/icon_user"
                     android:drawablePadding="10dp"
@@ -99,8 +100,8 @@
                 android:hint="Email">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/emailInput"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
+                    android:layout_width="330dp"
+                    android:layout_height="60dp"
                     android:textSize="20sp"
                     android:drawableStart="@drawable/icon_email"
                     android:drawablePadding="10dp"
@@ -121,8 +122,8 @@
                 android:hint="Telepon">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/phoneInput"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
+                    android:layout_width="330dp"
+                    android:layout_height="60dp"
                     android:textSize="20sp"
                     android:drawableStart="@drawable/icon_phone"
                     android:drawablePadding="10dp"
@@ -145,8 +146,8 @@
                 android:hint="Password">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/passwordInput"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
+                    android:layout_width="330dp"
+                    android:layout_height="60dp"
                     android:textSize="20sp"
                     android:drawableStart="@drawable/icon_password"
                     android:drawablePadding="10dp"
@@ -169,7 +170,7 @@
                     android:fontFamily="@font/poppins_medium"/>
 
                 <TextView
-                    android:id="@+id/loginButtonInRegister"
+                    android:id="@+id/loginButtonFromRegister"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -183,9 +184,6 @@
 
         </LinearLayout>
 
-
-
-
     </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -195,6 +193,6 @@
         android:background="@drawable/button_register"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="615dp" />
+        android:layout_marginTop="650dp" />
 
 </RelativeLayout>

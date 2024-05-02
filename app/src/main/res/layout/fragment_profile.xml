@@ -16,12 +16,11 @@
             android:layout_height="70dp"
             android:src="@drawable/icon_user_photo_profile"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            />
+            android:layout_marginTop="30dp"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_1"
-            android:layout_width="360dp"
+            android:layout_width="375dp"
             android:layout_height="330dp"
             android:layout_below="@id/user_photo_profile"
             android:layout_centerHorizontal="true"
@@ -33,9 +32,10 @@
                 android:layout_margin="15dp">
 
                 <ImageView
+                    android:layout_marginTop="5dp"
                     android:id="@+id/icon_user_profile"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/icon_user_profile"/>
 
                 <TextView
@@ -44,25 +44,26 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/icon_user_profile"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="16dp"
                     android:text="Handayani"
                     android:fontFamily="@font/poppins_extra_bold"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
-
 
                 <View
                     android:id="@+id/line1"
                     android:layout_width="match_parent"
                     android:layout_below="@id/icon_user_profile"
                     android:layout_height="2dp"
-                    android:background="@color/platinum" />
+                    android:background="@color/platinum"
+                    android:layout_marginTop="5dp"/>
 
                 <ImageView
                     android:id="@+id/icon_email_profile"
                     android:layout_below="@id/line1"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
                     android:src="@drawable/icon_email_profile"/>
 
                 <TextView
@@ -84,14 +85,16 @@
                     android:layout_width="match_parent"
                     android:layout_below="@id/icon_email_profile"
                     android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
                     android:background="@color/platinum"
                     />
 
                 <ImageView
                     android:id="@+id/icon_phone_profile"
                     android:layout_below="@id/line2"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
                     android:src="@drawable/icon_phone_profile"
                     />
 
@@ -113,15 +116,16 @@
                     android:layout_width="match_parent"
                     android:layout_below="@id/icon_phone_profile"
                     android:layout_height="2dp"
-                    android:background="@color/platinum" />
+                    android:background="@color/platinum"
+                    android:layout_marginTop="5dp"/>
 
                 <ImageView
                     android:id="@+id/icon_expand_profile"
                     android:layout_below="@id/line3"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/icon_expand_profile"
-                    />
+                    android:layout_marginTop="5dp"/>
 
                 <TextView
                     android:id="@+id/expandProfile"
@@ -141,15 +145,16 @@
                     android:layout_width="match_parent"
                     android:layout_below="@id/icon_expand_profile"
                     android:layout_height="2dp"
-                    android:background="@color/platinum" />
+                    android:background="@color/platinum"
+                    android:layout_marginTop="5dp"/>
 
                 <ImageView
                     android:id="@+id/icon_address_profile"
                     android:layout_below="@id/line4"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/icon_address"
-                    />
+                    android:layout_marginTop="5dp"/>
 
                 <TextView
                     android:id="@+id/addressProfile"
