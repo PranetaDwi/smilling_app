@@ -27,8 +27,8 @@
 
                 <ImageView
                     android:id="@+id/icon_calendar"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/icon_calendar"
                     />
 
@@ -39,12 +39,12 @@
                     android:layout_toRightOf="@+id/icon_calendar"
                     android:text="2025-02-09"
                     android:fontFamily="@font/poppins_semi_bold"
-                    android:textSize="18sp"/>
+                    android:textSize="15sp"/>
 
                 <ImageView
                     android:id="@+id/icon_time"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/icon_timespan"
                     android:layout_toLeftOf="@id/waktuCek"
                     />
@@ -56,14 +56,14 @@
                     android:layout_alignParentRight="true"
                     android:text="13:20:15"
                     android:fontFamily="@font/poppins_semi_bold"
-                    android:textSize="18sp"/>
+                    android:textSize="15sp"/>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card_1"
                     android:layout_below="@id/waktuCek"
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:layout_margin="5dp"
+                    android:layout_margin="3dp"
                     android:backgroundTint="@color/may_green"
                     app:cardCornerRadius="5dp">
 
@@ -107,16 +107,12 @@
                             android:layout_toRightOf="@id/text_hasil_npk"
                             android:text="16.16.16 "
                             android:layout_below="@id/namaKomoditas"
-                            android:fontFamily="@font/poppins_semi_bold"
+                            android:fontFamily="@font/poppins_bold"
                             android:textColor="@color/white"
                             android:textSize="20dp"
                             android:layout_marginLeft="10dp"/>
 
-
-
-
                     </RelativeLayout>
-
 
                 </androidx.cardview.widget.CardView>
 
@@ -135,7 +131,7 @@
                     android:id="@+id/listRekomendasiPupuk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1. Food Pedia 456"
+                    android:text="Food Pedia 456"
                     android:layout_marginTop="2dp"
                     android:layout_below="@id/text_rekomendasi_pupuk"
                     android:layout_marginLeft="5dp"

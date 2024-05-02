@@ -19,17 +19,17 @@
             android:name=".profile.EditProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".profile.ProfileActivity"
+            android:name=".profile.ProfileFragment"
             android:exported="false" />
         <activity
-            android:name=".history.HistoryActivity"
+            android:name=".history.HistoryFragment"
             android:exported="false" />
         <activity
             android:name=".home.HasilRekomendasiActivity"
             android:exported="false" />
-        <activity
-            android:name=".home.RekomendasiActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".home.RekomendasiActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".views.FragmentActivity"
             android:exported="false" />

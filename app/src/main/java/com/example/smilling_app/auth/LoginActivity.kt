@@ -1,21 +1,48 @@
 package com.example.smilling_app.auth
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.smilling_app.R
+import com.example.smilling_app.databinding.ActivityLoginBinding
+import com.example.smilling_app.home.HomepageFragment
+import com.example.smilling_app.views.FragmentActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
+
+    private lateinit var binding : ActivityLoginBinding
+    private lateinit var auth : FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityLoginBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_login)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        setContentView(binding.root)
+        auth = FirebaseAuth.getInstance()
+
+        with(binding){
+            val intentToHomeActivity = Intent(this@LoginActivity, FragmentActivity::class.java)
+
+            loginButton.setOnClickListener{
+                val email = emailInput.text.toString()
+                val password = passwordInput.text.toString()
+
+                auth.signInWithEmailAndPassword(email, password).addOnCompleteListener{task ->
+                    if (task.isSuccessful){
+                        Toast.makeText(this@LoginActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
+                        startActivity(intentToHomeActivity)
+                    }
+                }.addOnFailureListener{exception ->
+                    Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
+                }
+
+            }
         }
+
+
     }
 }
