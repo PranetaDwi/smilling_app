@@ -185,6 +185,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/editProfileButton"
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_height="50dp"
@@ -222,6 +223,7 @@
                     android:background="@color/platinum" />
 
                 <LinearLayout
+                    android:id="@+id/settingToolsButton"
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_height="50dp"
@@ -259,6 +261,7 @@
                     android:background="@color/platinum" />
 
                 <LinearLayout
+                    android:id="@+id/helpsButton"
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_height="50dp"
@@ -296,6 +299,7 @@
                     android:background="@color/platinum" />
 
                 <LinearLayout
+                    android:id="@+id/logoutButton"
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_height="50dp"
