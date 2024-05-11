@@ -1,16 +1,14 @@
 package com.example.smilling_app.auth
 
+import android.bluetooth.BluetoothDevice
+import android.bluetooth.BluetoothManager
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.smilling_app.PrefManager
-import com.example.smilling_app.R
 import com.example.smilling_app.databinding.ActivityLoginBinding
-import com.example.smilling_app.home.HomepageFragment
 import com.example.smilling_app.views.FragmentActivity
 import com.google.firebase.auth.FirebaseAuth
 

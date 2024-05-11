@@ -104,12 +104,22 @@
 
         </LinearLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/welcome_greeting_3"
+            android:text="Hubungkan Perangkat"
+            android:id="@+id/hubungkanPerangkat"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:fontFamily="@font/poppins_extra_bold_italic"/>
+
         <androidx.cardview.widget.CardView
-            android:layout_below="@id/welcome_greeting_3"
+            android:layout_below="@id/hubungkanPerangkat"
             android:id="@+id/card_1"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            app:cardElevation="10dp"
+            app:cardElevation="5dp"
             app:cardPreventCornerOverlap="true"
             app:cardUseCompatPadding="true">
 
@@ -141,9 +151,10 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/bluetoothNameText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SMILING0868"
+                    android:text="Tidak Terhubung"
                     android:fontFamily="@font/poppins_extra_bold"
                     android:textSize="20dp"
                     android:textColor="@color/may_green"/>
