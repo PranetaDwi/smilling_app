@@ -18,7 +18,9 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import com.example.smilling_app.R
+import com.example.smilling_app.auth.LoginActivity
 import com.example.smilling_app.databinding.FragmentHomepageBinding
+import com.example.smilling_app.views.SplashActivity
 
 class HomepageFragment : Fragment() {
 
