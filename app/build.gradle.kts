@@ -59,4 +59,9 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.42")
     kapt("com.google.dagger:hilt-android-compiler:2.42")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
+
+    implementation("androidx.room:room-runtime:2.4.1")
+    kapt("androidx.room:room-compiler:2.4.1")
+
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
 }
