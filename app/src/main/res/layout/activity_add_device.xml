@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.AddDeviceActivity"
+    android:background="@drawable/background_1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_back"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add the Device"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Device Name"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="200dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeColor="@color/green_lizard"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/black"
+        android:hint="smilingAB034">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/luasEditInput"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_input_2"
+            android:drawableStart="@drawable/icon_key"
+            android:drawablePadding="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/button_simpan"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="240dp"/>
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="*You can find the DEVICE NAME on the device packaging "
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"/>
+
+</LinearLayout>

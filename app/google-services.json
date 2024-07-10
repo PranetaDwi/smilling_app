@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "589195552386",
-    "project_id": "smilling-app",
-    "storage_bucket": "smilling-app.appspot.com"
+    "project_number": "158580373246",
+    "firebase_url": "https://npkproject-7d82a-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "npkproject-7d82a",
+    "storage_bucket": "npkproject-7d82a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:589195552386:android:ad150f3949898920d9b69b",
+        "mobilesdk_app_id": "1:158580373246:android:a703a8105cbf82cbf797af",
         "android_client_info": {
           "package_name": "com.example.smilling_app"
         }
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDvFhQ-UwL_irb2QkZNtmchTqYA54rMHQQ"
+          "current_key": "AIzaSyAElPXaq7uL7OLeu5n31MwBpQ1bO8JUg4g"
         }
       ],
       "services": {

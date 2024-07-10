@@ -28,8 +28,6 @@ class HomepageFragment : Fragment() {
     private val binding get() = _binding!!
 
     companion object {
-        private const val REQUEST_ENABLE_BT = 123
-        private const val REQUEST_BLUETOOTH_PERMISSION = 1001
     }
 
     override fun onCreateView(
@@ -47,31 +45,7 @@ class HomepageFragment : Fragment() {
         val komoditasSayurans = arrayOf("Cabai", "Sawi", "Bawang")
         val komoditasBuahs = arrayOf("Leci", "Jeruk", "Mangga")
 
-        val bluetoothManager: BluetoothManager? = requireActivity().getSystemService(BluetoothManager::class.java)
-        val bluetoothAdapter: BluetoothAdapter? = bluetoothManager?.adapter
-
         with (binding) {
-            hubungkanPerangkat.setOnClickListener{
-                if (ActivityCompat.checkSelfPermission(
-                        requireContext(),
-                        Manifest.permission.BLUETOOTH
-                    ) != PackageManager.PERMISSION_GRANTED
-                ) {
-                    requestPermissions(arrayOf(Manifest.permission.BLUETOOTH), REQUEST_BLUETOOTH_PERMISSION)
-                } else {
-                    if (bluetoothAdapter == null) {
-                        Toast.makeText(requireContext(), "Bluetooth is not supported", Toast.LENGTH_SHORT).show()
-                    } else {
-                        if (!bluetoothAdapter.isEnabled) {
-                            val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
-                            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT)
-
-                        } else {
-                            startActivity(Intent(requireContext(), DeviceListActivity::class.java))
-                        }
-                    }
-                }
-            }
 
             val tipeAdapter = ArrayAdapter(
                 requireContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, tipes
@@ -112,13 +86,7 @@ class HomepageFragment : Fragment() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == REQUEST_ENABLE_BT) {
-            if (resultCode == Activity.RESULT_OK) {
-                startActivity(Intent(requireContext(), DeviceListActivity::class.java))
-            } else {
-                Toast.makeText(requireContext(), "Bluetooth activation cancelled", Toast.LENGTH_SHORT).show()
-            }
-        }
+
     }
 
     override fun onDestroyView() {
