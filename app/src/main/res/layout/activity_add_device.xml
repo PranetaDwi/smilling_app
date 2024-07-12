@@ -52,13 +52,12 @@
         app:boxStrokeWidth="0dp"
         app:boxStrokeColor="@color/green_lizard"
         android:textColorHint="@color/white"
-        app:hintTextColor="@color/black"
-        android:hint="smilingAB034">
+        app:hintTextColor="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/luasEditInput"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
+            android:layout_width="390dp"
+            android:layout_height="90dp"
             android:background="@drawable/bg_input_2"
             android:drawableStart="@drawable/icon_key"
             android:drawablePadding="10dp"

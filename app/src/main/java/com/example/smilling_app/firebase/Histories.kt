@@ -4,14 +4,12 @@ import androidx.room.PrimaryKey
 import com.google.type.Date
 import com.google.type.DateTime
 
-data class SensorDatas(
+data class Histories(
     @PrimaryKey
     var id: String = "",
-    var nitrogen: Int,
-    var fosfor: Int,
-    var kalium: Int,
-    var ph: Int,
-    var kelembaban: Int,
+    var userDataId: String = "",
+    var npkResult: String = "",
     var date: Date,
-    var time: DateTime
+    var time: DateTime,
+    var fertilizerId: String = ""
 )

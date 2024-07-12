@@ -106,7 +106,7 @@
                     android:layout_below="@id/line2"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="15dp"
-                    android:text="085877573513"
+                    android:text="Belum Diatur"
                     android:fontFamily="@font/poppins_extra_bold"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -135,7 +135,7 @@
                     android:layout_below="@id/line3"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="15dp"
-                    android:text="085877573513"
+                    android:text="Belum Diatur"
                     android:fontFamily="@font/poppins_extra_bold"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -164,7 +164,7 @@
                     android:layout_below="@id/line4"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="15dp"
-                    android:text="085877573513"
+                    android:text="Belum Diatur"
                     android:fontFamily="@font/poppins_extra_bold"
                     android:textSize="18sp"
                     android:textColor="@color/black"/>
@@ -207,12 +207,15 @@
                         android:layout_marginLeft="15dp"
                         android:clickable="true"/>
 
-                    <ImageView
+
+                    <androidx.appcompat.widget.AppCompatImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/navigateToEditProfileButton"
                         android:src="@drawable/icon_forward"
+                        android:backgroundTint="@color/white"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="100dp"/>
+                        android:layout_marginLeft="90dp" />
 
                 </LinearLayout>
 
@@ -245,12 +248,14 @@
                         android:layout_marginLeft="15dp"
                         android:clickable="true"/>
 
-                    <ImageView
+                    <androidx.appcompat.widget.AppCompatImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/navigateToSettingToolButton"
                         android:src="@drawable/icon_forward"
+                        android:backgroundTint="@color/white"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="100dp"/>
+                        android:layout_marginLeft="90dp" />
 
                 </LinearLayout>
 
@@ -283,12 +288,13 @@
                         android:layout_marginLeft="15dp"
                         android:clickable="true"/>
 
-                    <ImageView
+                    <androidx.appcompat.widget.AppCompatImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/icon_forward"
+                        android:backgroundTint="@color/white"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="100dp"/>
+                        android:layout_marginLeft="90dp" />
 
                 </LinearLayout>
 
@@ -321,12 +327,13 @@
                         android:layout_marginLeft="15dp"
                         android:clickable="true"/>
 
-                    <ImageView
+                    <androidx.appcompat.widget.AppCompatImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/icon_forward"
+                        android:backgroundTint="@color/white"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="100dp"/>
+                        android:layout_marginLeft="90dp" />
 
                 </LinearLayout>
 

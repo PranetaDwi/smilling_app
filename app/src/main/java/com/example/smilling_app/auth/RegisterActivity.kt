@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.smilling_app.databinding.ActivityRegisterBinding
+import com.example.smilling_app.firebase.UserDatas
 import com.example.smilling_app.views.FragmentActivity
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -49,10 +50,14 @@ class RegisterActivity : AppCompatActivity() {
                                 val user = auth.currentUser
                                 val uid = user?.uid
 
-                                val dataPribadi = hashMapOf(
-                                    "name" to name,
-                                    "phone" to phone,
+                                val dataPribadi = UserDatas(
+                                    name,
+                                    phone,
+                                    0,
+                                    "Belum Diatur",
+                                    "Belum Diatur"
                                 )
+                                
                                 db.collection("userDatas").document(uid.toString())
                                     .set(dataPribadi)
                                     .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }

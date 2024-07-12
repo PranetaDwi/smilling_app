@@ -7,16 +7,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.smilling_app.PrefManager
-import com.example.smilling_app.R
 import com.example.smilling_app.auth.LoginActivity
-import com.example.smilling_app.databinding.FragmentHomepageBinding
 import com.example.smilling_app.databinding.FragmentProfileBinding
+import com.google.firebase.firestore.FirebaseFirestore
 
 class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
     private lateinit var prefManager: PrefManager
+
+    // inisiasi firestore
+    private val firestore = FirebaseFirestore.getInstance()
+    private val userDataCollectionRef = firestore.collection("userDatas")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,7 +40,31 @@ class ProfileFragment : Fragment() {
                 prefManager.clear()
                 startActivity(Intent(requireContext(), LoginActivity::class.java))
             }
+            navigateToEditProfileButton.setOnClickListener{
+                startActivity(Intent(requireContext(), EditProfileActivity::class.java))
+            }
+            navigateToSettingToolButton.setOnClickListener {
+                startActivity(Intent(requireContext(), AddDeviceActivity::class.java))
+            }
+
+            val userReferenceId = prefManager.getUserId()
+
+            if (userReferenceId.isNotBlank()){
+                val userDataDocumentRef = userDataCollectionRef.document(userReferenceId)
+                userDataDocumentRef.get().addOnSuccessListener { documentSnapshot ->
+                    if (documentSnapshot.exists()){
+                        nameProfile.text = documentSnapshot.getString("name")
+                        phoneProfile.text = documentSnapshot.getString("phone")
+                        expandProfile.text = documentSnapshot.getString("expand")
+                        addressProfile.text = documentSnapshot.getString("address")
+                    }
+                }
+            }
+
         }
+
+
+
     }
 
 

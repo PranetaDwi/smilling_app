@@ -46,8 +46,8 @@
         android:hint="Name">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameInput"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
+            android:layout_width="390dp"
+            android:layout_height="80dp"
             android:textSize="20sp"
             android:drawableStart="@drawable/icon_user_profile"
             android:drawablePadding="10dp"
@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:boxStrokeWidth="0dp"
         app:boxStrokeColor="@color/green_lizard"
         android:textColorHint="@color/white"
@@ -68,8 +68,8 @@
         android:hint="Email">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailEditInput"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
+            android:layout_width="390dp"
+            android:layout_height="80dp"
             android:textSize="20sp"
             android:drawableStart="@drawable/icon_email_profile"
             android:drawablePadding="10dp"
@@ -82,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:boxStrokeWidth="0dp"
         app:boxStrokeColor="@color/green_lizard"
         android:textColorHint="@color/white"
@@ -90,8 +90,8 @@
         android:hint="Phone">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/phoneEditInput"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
+            android:layout_width="390dp"
+            android:layout_height="80dp"
             android:textSize="20sp"
             android:drawableStart="@drawable/icon_phone_profile"
             android:drawablePadding="10dp"
@@ -100,35 +100,35 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeColor="@color/green_lizard"
-        android:textColorHint="@color/white"
-        app:hintTextColor="@color/black"
-        app:endIconMode="password_toggle"
-        app:endIconTint="@color/white"
-        android:hint="Password">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordEditInput"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:textSize="20sp"
-            android:drawableStart="@drawable/icon_password_profile"
-            android:drawablePadding="10dp"
-            android:background="@drawable/bg_input_2"
-            android:textStyle="bold"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:boxStrokeWidth="0dp"-->
+<!--        app:boxStrokeColor="@color/green_lizard"-->
+<!--        android:textColorHint="@color/white"-->
+<!--        app:hintTextColor="@color/black"-->
+<!--        app:endIconMode="password_toggle"-->
+<!--        app:endIconTint="@color/white"-->
+<!--        android:hint="Password">-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/passwordEditInput"-->
+<!--            android:layout_width="390dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:textSize="20sp"-->
+<!--            android:drawableStart="@drawable/icon_password_profile"-->
+<!--            android:drawablePadding="10dp"-->
+<!--            android:background="@drawable/bg_input_2"-->
+<!--            android:textStyle="bold"-->
+<!--            />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:boxStrokeWidth="0dp"
         app:boxStrokeColor="@color/green_lizard"
         android:textColorHint="@color/white"
@@ -136,8 +136,8 @@
         android:hint="Luas">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/luasEditInput"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
+            android:layout_width="390dp"
+            android:layout_height="80dp"
             android:textSize="20sp"
             android:drawableStart="@drawable/icon_expand_profile"
             android:drawablePadding="10dp"
@@ -150,7 +150,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:boxStrokeWidth="0dp"
         app:boxStrokeColor="@color/green_lizard"
         android:textColorHint="@color/white"
@@ -158,8 +158,8 @@
         android:hint="Alamat">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/alamatEditInput"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
+            android:layout_width="390dp"
+            android:layout_height="80dp"
             android:textSize="20sp"
             android:drawableStart="@drawable/icon_address"
             android:drawablePadding="10dp"
