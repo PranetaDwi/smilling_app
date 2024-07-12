@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import com.example.smilling_app.PrefManager
 import com.example.smilling_app.auth.LoginActivity
 import com.example.smilling_app.databinding.FragmentProfileBinding
+import com.google.firebase.Firebase
+import com.google.firebase.auth.auth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class ProfileFragment : Fragment() {
@@ -38,6 +40,7 @@ class ProfileFragment : Fragment() {
             logoutButton.setOnClickListener{
                 prefManager.setLoggedIn(false)
                 prefManager.clear()
+                Firebase.auth.signOut()
                 startActivity(Intent(requireContext(), LoginActivity::class.java))
             }
             navigateToEditProfileButton.setOnClickListener{
@@ -62,11 +65,5 @@ class ProfileFragment : Fragment() {
             }
 
         }
-
-
-
     }
-
-
-
 }

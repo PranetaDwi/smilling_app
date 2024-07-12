@@ -45,7 +45,7 @@
         app:hintTextColor="@color/black"
         android:hint="Name">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nameInput"
+            android:id="@+id/nameEditInput"
             android:layout_width="390dp"
             android:layout_height="80dp"
             android:textSize="20sp"

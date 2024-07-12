@@ -53,7 +53,7 @@ class RegisterActivity : AppCompatActivity() {
                                 val dataPribadi = UserDatas(
                                     name,
                                     phone,
-                                    0,
+                                    "Belum Diatur",
                                     "Belum Diatur",
                                     "Belum Diatur"
                                 )
