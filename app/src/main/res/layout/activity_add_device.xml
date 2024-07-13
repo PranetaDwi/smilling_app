@@ -55,7 +55,7 @@
         app:hintTextColor="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/luasEditInput"
+            android:id="@+id/addDeviceInput"
             android:layout_width="390dp"
             android:layout_height="90dp"
             android:background="@drawable/bg_input_2"
@@ -65,7 +65,8 @@
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/saveButton"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id("com.google.gms.google-services")
+    alias(libs.plugins.googleGmsGoogleServices)
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
 }
@@ -43,7 +43,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -51,6 +50,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -63,5 +63,5 @@ dependencies {
     implementation("androidx.room:room-runtime:2.4.1")
     kapt("androidx.room:room-compiler:2.4.1")
 
-    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
 }

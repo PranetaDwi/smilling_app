@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home.PemilihanHistoryActivity"
-    android:background="@drawable/background_2">
+    android:background="@drawable/background_2"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/backButton"
@@ -32,5 +33,11 @@
             android:textColor="@color/white"
             android:layout_marginLeft="5dp"/>
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sensorDataLists"
+        android:layout_marginTop="30dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
 
 </LinearLayout>

@@ -17,15 +17,22 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
+import com.example.smilling_app.PrefManager
 import com.example.smilling_app.R
 import com.example.smilling_app.auth.LoginActivity
 import com.example.smilling_app.databinding.FragmentHomepageBinding
 import com.example.smilling_app.views.SplashActivity
+import com.google.firebase.firestore.FirebaseFirestore
 
 class HomepageFragment : Fragment() {
 
     private var _binding: FragmentHomepageBinding? = null
     private val binding get() = _binding!!
+    private lateinit var prefManager: PrefManager
+
+    // inisiasi firestore
+    private val firestore = FirebaseFirestore.getInstance()
+    private val userDataCollectionRef = firestore.collection("userDatas")
 
     companion object {
     }
@@ -41,11 +48,23 @@ class HomepageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        prefManager = PrefManager.getInstance(requireContext())
+
+        val userReferenceId = prefManager.getUserId()
+
         val tipes = arrayOf("Sayuran", "Buah")
         val komoditasSayurans = arrayOf("Cabai", "Sawi", "Bawang")
         val komoditasBuahs = arrayOf("Leci", "Jeruk", "Mangga")
 
         with (binding) {
+            if (userReferenceId.isNotBlank()){
+                val userDataDocumentRef = userDataCollectionRef.document(userReferenceId)
+                userDataDocumentRef.get().addOnSuccessListener { documentSnapshot ->
+                    if (documentSnapshot.exists()){
+                        deviceNameText.text = documentSnapshot.getString("deviceName")
+                    }
+                }
+            }
 
             val tipeAdapter = ArrayAdapter(
                 requireContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, tipes

@@ -5,13 +5,12 @@ import com.google.type.Date
 import com.google.type.DateTime
 
 data class SensorDatas(
-    @PrimaryKey
-    var id: String = "",
-    var nitrogen: Int,
-    var fosfor: Int,
-    var kalium: Int,
-    var ph: Int,
-    var kelembaban: Int,
-    var date: Date,
-    var time: DateTime
+    var N : Double = 0.0,
+    var P : Double = 0.0,
+    var K : Double = 0.0,
+    var pH: Double = 0.0,
+    var Temp : Double = 0.0,
+    var Cond : Double = 0.0,
+    var Moist: Double = 0.0,
+    var Waktu: String = ""
 )
