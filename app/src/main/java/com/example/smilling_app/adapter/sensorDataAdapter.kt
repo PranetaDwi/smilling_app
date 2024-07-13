@@ -1,6 +1,5 @@
 package com.example.smilling_app.adapter
 
-import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,12 +11,17 @@ class SensorDataAdapter(private val listSensorDatas: List<SensorDatas>) : Recycl
 
     inner class ItemSensorDataViewHolder(private val binding: ItemSensorDataBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bindItem(data: SensorDatas) {
+            val waktu = data.Waktu.split(" ")
+            val dateSensor = waktu[0]
+            val timeSensor = waktu[1]
             with(binding) {
                 dataNitrogen.text = data.N.toString()
                 dataFosfor.text = data.P.toString()
                 dataPh.text = data.pH.toString()
                 dataKalium.text = data.K.toString()
                 dataKelembaban.text = data.Moist.toString()
+                tanggalCek.text = dateSensor
+                waktuCek.text = timeSensor
                 Log.i("SensorDataAdapter", "Binding data: $data")
             }
         }
