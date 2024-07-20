@@ -1,15 +1,11 @@
 package com.example.smilling_app.firebase
 
-import androidx.room.PrimaryKey
-import com.google.type.Date
-import com.google.type.DateTime
-
 data class Histories(
-    @PrimaryKey
-    var id: String = "",
-    var userDataId: String = "",
-    var npkResult: String = "",
-    var date: Date,
-    var time: DateTime,
-    var fertilizerId: String = ""
+    var N: Double = 0.0,
+    var P: Double = 0.0,
+    var K: Double = 0.0,
+    var pH: Double = 0.0,
+    var Temp: Double = 0.0,
+    var kadar: Double = 0.0,
+    var Waktu: String = ""
 )

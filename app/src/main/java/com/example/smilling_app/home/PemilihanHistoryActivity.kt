@@ -21,6 +21,14 @@ class PemilihanHistoryActivity : AppCompatActivity() {
     private lateinit var database: DatabaseReference
     private lateinit var dataList: MutableList<SensorDatas>
 
+    companion object {
+        const val N_VALUE = "N_VALUE"
+        const val P_VALUE = "P_VALUE"
+        const val K_VALUE = "K_VALUE"
+        const val PH_VALUE = "PH_VALUE"
+        const val TEMP_VALUE = "TEMP_VALUE"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPemilihanHistoryBinding.inflate(layoutInflater)
@@ -28,10 +36,6 @@ class PemilihanHistoryActivity : AppCompatActivity() {
 
         dataList = mutableListOf()
         sensorDataAdapter = SensorDataAdapter(dataList)
-
-        binding.buttonRekomendasiPupuk.setOnClickListener{
-            startActivity(Intent(this@PemilihanHistoryActivity, HasilRekomendasiActivity::class.java))
-        }
 
         // Set layout manager and adapter for RecyclerView
         binding.sensorDataLists.apply {
@@ -54,12 +58,16 @@ class PemilihanHistoryActivity : AppCompatActivity() {
                     }
                 }
                 Log.i("dataSensor", "Data list size: ${dataList.size}")
-                sensorDataAdapter.notifyDataSetChanged() // Notify adapter of data changes
             }
 
             override fun onCancelled(error: DatabaseError) {
                 Log.w("MainActivity", "loadPost:onCancelled", error.toException())
             }
         })
+
+        binding.buttonRekomendasiPupuk.setOnClickListener{
+            val intentToHasilRekomendasiActivity = Intent(this@PemilihanHistoryActivity, HasilRekomendasiActivity::class.java)
+            startActivity(intentToHasilRekomendasiActivity)
+        }
     }
 }

@@ -75,7 +75,7 @@
                             android:id="@+id/namaKomoditas"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Cabai"
+                            android:text="Padi"
                             android:textSize="18dp"
                             android:fontFamily="@font/poppins_extra_bold"
                             android:textColor="@color/yellow"/>
@@ -84,7 +84,7 @@
                             android:id="@+id/namaTipe"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sayuran"
+                            android:text="Bahan Pangan"
                             android:textSize="18dp"
                             android:fontFamily="@font/poppins_extra_bold"
                             android:textColor="@color/yellow"
@@ -105,7 +105,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/text_hasil_npk"
-                            android:text="16.16.16 "
+                            android:text="12.10.15"
                             android:layout_below="@id/namaKomoditas"
                             android:fontFamily="@font/poppins_bold"
                             android:textColor="@color/white"
@@ -120,7 +120,7 @@
                     android:id="@+id/text_rekomendasi_pupuk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rekomendasi Pupuk"
+                    android:text="Kadar Pupuk"
                     android:layout_marginTop="10dp"
                     android:layout_below="@id/card_1"
                     android:layout_marginLeft="5dp"
@@ -128,15 +128,25 @@
                     android:textSize="17dp"/>
 
                 <TextView
-                    android:id="@+id/listRekomendasiPupuk"
+                    android:id="@+id/hasilKadarPupuk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Food Pedia 456"
+                    android:text="80.23930"
                     android:layout_marginTop="2dp"
                     android:layout_below="@id/text_rekomendasi_pupuk"
                     android:layout_marginLeft="5dp"
                     android:fontFamily="@font/poppins_light"
                     android:textSize="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dalam Satuan kg/ha"
+                    android:layout_marginTop="2dp"
+                    android:layout_below="@id/hasilKadarPupuk"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/poppins_black_italic"
+                    android:textSize="10dp"/>
 
             </RelativeLayout>
 
