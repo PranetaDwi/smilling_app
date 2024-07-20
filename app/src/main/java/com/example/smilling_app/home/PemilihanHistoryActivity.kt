@@ -1,5 +1,6 @@
 package com.example.smilling_app.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -29,7 +30,7 @@ class PemilihanHistoryActivity : AppCompatActivity() {
         sensorDataAdapter = SensorDataAdapter(dataList)
 
         binding.buttonRekomendasiPupuk.setOnClickListener{
-
+            startActivity(Intent(this@PemilihanHistoryActivity, HasilRekomendasiActivity::class.java))
         }
 
         // Set layout manager and adapter for RecyclerView

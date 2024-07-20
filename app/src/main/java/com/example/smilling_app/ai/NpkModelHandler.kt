@@ -11,7 +11,7 @@ import java.nio.ByteOrder
 import java.nio.MappedByteBuffer
 import java.nio.channels.FileChannel
 
-class LinearModelHandler(context: Context) {
+class NpkModelHandler(context: Context) {
 
     private var interpreter: Interpreter
 
@@ -21,7 +21,7 @@ class LinearModelHandler(context: Context) {
 
     @Throws(IOException::class)
     private fun loadModelFile(context: Context): MappedByteBuffer {
-        val assetFileDescriptor = context.assets.openFd("linear_model.tflite")
+        val assetFileDescriptor = context.assets.openFd("npk_model.tflite")
         val fileInputStream = FileInputStream(assetFileDescriptor.fileDescriptor)
         val fileChannel = fileInputStream.channel
         val startOffset = assetFileDescriptor.startOffset
