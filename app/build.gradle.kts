@@ -39,6 +39,7 @@ android {
 
     buildFeatures{
         viewBinding=true
+        mlModelBinding = true
     }
 }
 
@@ -51,9 +52,12 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.database)
+    implementation(libs.tensorflow.lite.support)
+    implementation(libs.tensorflow.lite.metadata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation (libs.tensorflow.lite)
 
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     implementation("com.google.dagger:hilt-android:2.42")
