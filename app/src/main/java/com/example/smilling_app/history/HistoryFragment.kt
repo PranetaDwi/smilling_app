@@ -1,60 +1,83 @@
 package com.example.smilling_app.history
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.smilling_app.PrefManager
 import com.example.smilling_app.R
+import com.example.smilling_app.adapter.SensorDataAdapter
+import com.example.smilling_app.adapter.historyAdapter
+import com.example.smilling_app.databinding.FragmentHistoryBinding
+import com.example.smilling_app.databinding.FragmentHomepageBinding
+import com.example.smilling_app.firebase.Histories
+import com.example.smilling_app.firebase.SensorDatas
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [HistoryFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HistoryFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentHistoryBinding? = null
+    private val binding get() = _binding!!
+    private lateinit var prefManager: PrefManager
+
+    private lateinit var databaseForHistory: DatabaseReference
+
+    private lateinit var historyAdapter: historyAdapter
+    private lateinit var dataList: MutableList<Histories>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_history, container, false)
+        _binding = FragmentHistoryBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HistoryFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HistoryFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        prefManager = PrefManager.getInstance(requireContext())
+
+        dataList = mutableListOf()
+        historyAdapter = historyAdapter(dataList)
+
+        binding.historyLists.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = historyAdapter
+        }
+
+        databaseForHistory = FirebaseDatabase.getInstance().getReference("historiRekomendasi").child(prefManager.getUserId())
+        databaseForHistory.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                dataList.clear()
+                for (dataSnapshot in snapshot.children) {
+                    val data = dataSnapshot.getValue(Histories::class.java)
+                    if (data != null) {
+                        dataList.add(data)
+                        Log.i("histories", "Data fetched: $data")
+                    } else {
+                        Log.e("histories", "Parsed data is null")
+                    }
                 }
+                Log.i("histories", "Data list size: ${dataList.size}")
+                historyAdapter.notifyDataSetChanged()
             }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.w("FragmentHistory", "loadPost:onCancelled", error.toException())
+            }
+        })
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

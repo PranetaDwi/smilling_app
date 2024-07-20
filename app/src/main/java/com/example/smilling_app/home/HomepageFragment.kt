@@ -34,9 +34,6 @@ class HomepageFragment : Fragment() {
     private val firestore = FirebaseFirestore.getInstance()
     private val userDataCollectionRef = firestore.collection("userDatas")
 
-    companion object {
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

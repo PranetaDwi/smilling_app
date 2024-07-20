@@ -21,14 +21,6 @@ class PemilihanHistoryActivity : AppCompatActivity() {
     private lateinit var database: DatabaseReference
     private lateinit var dataList: MutableList<SensorDatas>
 
-    companion object {
-        const val N_VALUE = "N_VALUE"
-        const val P_VALUE = "P_VALUE"
-        const val K_VALUE = "K_VALUE"
-        const val PH_VALUE = "PH_VALUE"
-        const val TEMP_VALUE = "TEMP_VALUE"
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPemilihanHistoryBinding.inflate(layoutInflater)
@@ -58,6 +50,7 @@ class PemilihanHistoryActivity : AppCompatActivity() {
                     }
                 }
                 Log.i("dataSensor", "Data list size: ${dataList.size}")
+                sensorDataAdapter.notifyDataSetChanged()
             }
 
             override fun onCancelled(error: DatabaseError) {
