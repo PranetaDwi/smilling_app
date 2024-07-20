@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import androidx.core.view.isNotEmpty
 import androidx.fragment.app.Fragment
 import com.example.smilling_app.PrefManager
 import com.example.smilling_app.R
@@ -49,9 +50,9 @@ class HomepageFragment : Fragment() {
 
         val userReferenceId = prefManager.getUserId()
 
-        val tipes = arrayOf("Sayuran", "Buah")
-        val komoditasSayurans = arrayOf("Cabai", "Sawi", "Bawang")
-        val komoditasBuahs = arrayOf("Leci", "Jeruk", "Mangga")
+        val tipes = arrayOf("Bahan Pangan")
+        val komoditasSayurans = arrayOf("Padi")
+//        val komoditasBuahs = arrayOf("Leci", "Jeruk", "Mangga")
 
         with (binding) {
             if (userReferenceId.isNotBlank()){
@@ -82,11 +83,11 @@ class HomepageFragment : Fragment() {
                             komoditasSayuranAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
                             komoditasInputDropdown.adapter = komoditasSayuranAdapter
                         }
-                        tipes[1] -> {
-                            val komoditasBuahAdapter = ArrayAdapter(requireContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, komoditasBuahs)
-                            komoditasBuahAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-                            komoditasInputDropdown.adapter = komoditasBuahAdapter
-                        }
+//                        tipes[1] -> {
+//                            val komoditasBuahAdapter = ArrayAdapter(requireContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, komoditasBuahs)
+//                            komoditasBuahAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+//                            komoditasInputDropdown.adapter = komoditasBuahAdapter
+//                        }
                     }
                 }
                 override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -95,7 +96,11 @@ class HomepageFragment : Fragment() {
             val intentToPemilihanHistoryActivity = Intent(requireContext(), PemilihanHistoryActivity::class.java)
 
             nextButton.setOnClickListener{
-                startActivity(intentToPemilihanHistoryActivity)
+                if (tipeInputDropdown.selectedItem == null || komoditasInputDropdown.selectedItem == null) {
+                    Toast.makeText(requireContext(), "Pilih Tipe dan Komoditas", Toast.LENGTH_SHORT).show()
+                } else {
+                    startActivity(intentToPemilihanHistoryActivity)
+                }
             }
         }
     }
