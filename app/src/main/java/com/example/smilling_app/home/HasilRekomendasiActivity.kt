@@ -77,7 +77,7 @@ class HasilRekomendasiActivity : AppCompatActivity() {
                         K = kValue.toDouble(),
                         pH = phValue.toDouble(),
                         Temp = tempValue.toDouble(),
-                        kadar = prediction[0].toDouble(),
+                        kadar = String.format("%.2f", prediction[0]).toDouble(),
                         Waktu = formattedDate
                     )
 
@@ -91,7 +91,7 @@ class HasilRekomendasiActivity : AppCompatActivity() {
 
 
                     with(binding) {
-                        hasilKadar.text = prediction[0].toString()
+                        hasilKadar.text = String.format("%.2f", prediction[0])
                         backButton.setOnClickListener {
                             startActivity(Intent(this@HasilRekomendasiActivity, PemilihanHistoryActivity::class.java))
                         }
