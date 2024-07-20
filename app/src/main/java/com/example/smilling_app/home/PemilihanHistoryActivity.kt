@@ -35,7 +35,7 @@ class PemilihanHistoryActivity : AppCompatActivity() {
         }
 
         // Initialize Firebase database reference
-        database = FirebaseDatabase.getInstance().getReference("dataDummy")
+        database = FirebaseDatabase.getInstance().getReference("data")
         database.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 dataList.clear() // Clear the list to avoid duplicates
