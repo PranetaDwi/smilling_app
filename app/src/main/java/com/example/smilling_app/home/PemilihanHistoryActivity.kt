@@ -28,6 +28,10 @@ class PemilihanHistoryActivity : AppCompatActivity() {
         dataList = mutableListOf()
         sensorDataAdapter = SensorDataAdapter(dataList)
 
+        binding.buttonRekomendasiPupuk.setOnClickListener{
+
+        }
+
         // Set layout manager and adapter for RecyclerView
         binding.sensorDataLists.apply {
             layoutManager = LinearLayoutManager(this@PemilihanHistoryActivity)

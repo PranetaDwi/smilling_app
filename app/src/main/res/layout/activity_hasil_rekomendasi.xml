@@ -62,7 +62,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="16.16.15"
+                    android:text="12.10.15"
                     android:fontFamily="@font/poppins_extra_bold"
                     android:layout_gravity="center_vertical"
                     android:textSize="25sp"
@@ -114,12 +114,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pupuk Merah"
+                    android:text="Kadar Pupuk"
                     android:fontFamily="@font/poppins_extra_bold"
                     android:textSize="15dp"
                     />
 
                 <TextView
+                    android:id="@+id/hasilKadar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pupuk ini merupakan pupuk serba guna"

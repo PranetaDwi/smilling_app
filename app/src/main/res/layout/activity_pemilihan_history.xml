@@ -34,6 +34,14 @@
             android:layout_marginLeft="5dp"/>
     </LinearLayout>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonRekomendasiPupuk"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_rekomendasi_pupuk"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/sensorDataLists"
         android:layout_marginTop="30dp"
