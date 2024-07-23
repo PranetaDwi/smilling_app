@@ -37,18 +37,22 @@ class PemilihanHistoryActivity : AppCompatActivity() {
 
         // Initialize Firebase database reference
         database = FirebaseDatabase.getInstance().getReference("data")
-        database.addValueEventListener(object : ValueEventListener {
+        database.orderByChild("Waktu").addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                dataList.clear() // Clear the list to avoid duplicates
+                dataList.clear()
+                val tempList = mutableListOf<SensorDatas>()
                 for (dataSnapshot in snapshot.children) {
                     val data = dataSnapshot.getValue(SensorDatas::class.java)
                     if (data != null) {
-                        dataList.add(data)
+                        tempList.add(data)
                         Log.i("dataSensor", "Data fetched: $data")
                     } else {
                         Log.e("dataSensor", "Parsed data is null")
                     }
                 }
+
+                tempList.reverse()
+                dataList.addAll(tempList)
                 Log.i("dataSensor", "Data list size: ${dataList.size}")
                 sensorDataAdapter.notifyDataSetChanged()
             }
