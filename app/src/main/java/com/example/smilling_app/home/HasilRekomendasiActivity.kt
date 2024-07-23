@@ -55,18 +55,23 @@ class HasilRekomendasiActivity : AppCompatActivity() {
                             kValue = data.K.toFloat()
                             phValue = data.pH.toFloat()
                             tempValue = data.Temp.toFloat()
+                            Log.i("fetchData", data.Waktu.toString())
                         } else {
                             Log.e("dataUntukRekomendasi", "Parsed data is null")
                         }
                     }
 
-                    modelHandler = NpkModelHandler(this@HasilRekomendasiActivity)
+//                    modelHandler = NpkModelHandler(this@HasilRekomendasiActivity)
+//
+//                    val inputData = floatArrayOf(nValue, pValue, kValue, phValue, tempValue)
+//
+//                    val prediction = modelHandler.predict(inputData)
+//
+//                    modelHandler.close()
 
-                    val inputData = floatArrayOf(nValue, pValue, kValue, phValue, tempValue)
-
-                    val prediction = modelHandler.predict(inputData)
-
-                    modelHandler.close()
+                    val maxValue = maxOf(nValue, pValue, kValue)
+                    Log.i("dataMax", maxValue.toString())
+                    val prediction = maxValue/0.15
 
                     val dateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
                     val formattedDate = dateFormat.format(Date())
@@ -77,7 +82,7 @@ class HasilRekomendasiActivity : AppCompatActivity() {
                         K = kValue.toDouble(),
                         pH = phValue.toDouble(),
                         Temp = tempValue.toDouble(),
-                        kadar = String.format("%.2f", prediction[0]).toDouble(),
+                        kadar = String.format("%.2f", prediction).toDouble(),
                         Waktu = formattedDate
                     )
 
@@ -91,7 +96,7 @@ class HasilRekomendasiActivity : AppCompatActivity() {
 
 
                     with(binding) {
-                        hasilKadar.text = String.format("%.2f", prediction[0])
+                        hasilKadar.text = String.format("%.2f", prediction)
                         backButton.setOnClickListener {
                             startActivity(Intent(this@HasilRekomendasiActivity, PemilihanHistoryActivity::class.java))
                         }
