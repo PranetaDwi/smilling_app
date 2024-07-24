@@ -27,7 +27,7 @@ class PemilihanHistoryActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         dataList = mutableListOf()
-        sensorDataAdapter = SensorDataAdapter(dataList)
+        sensorDataAdapter = SensorDataAdapter(dataList, onSelectedClick = { selectedClick -> })
 
         // Set layout manager and adapter for RecyclerView
         binding.sensorDataLists.apply {
@@ -61,6 +61,11 @@ class PemilihanHistoryActivity : AppCompatActivity() {
                 Log.w("MainActivity", "loadPost:onCancelled", error.toException())
             }
         })
+
+        sensorDataAdapter.onSelectedClick = {
+            data ->
+            Log.i("clicked", data.toString())
+        }
 
         binding.buttonRekomendasiPupuk.setOnClickListener{
             val intentToHasilRekomendasiActivity = Intent(this@PemilihanHistoryActivity, HasilRekomendasiActivity::class.java)

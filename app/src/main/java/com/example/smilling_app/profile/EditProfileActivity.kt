@@ -22,8 +22,7 @@ class EditProfileActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEditProfileBinding
     private lateinit var prefManager: PrefManager
-    
-    // inisiasi firestore
+
     private val firestore = FirebaseFirestore.getInstance()
     private val userDataCollectionRef = firestore.collection("userDatas")
     private lateinit var auth : FirebaseAuth
@@ -75,7 +74,10 @@ class EditProfileActivity : AppCompatActivity() {
                     .addOnCompleteListener(this@EditProfileActivity) { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(baseContext, "Berhasil mengubah data profile", Toast.LENGTH_SHORT,).show()
-                            startActivity(Intent(this@EditProfileActivity, ProfileFragment::class.java))
+                            val intent = Intent(this@EditProfileActivity, FragmentActivity::class.java)
+                            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+                            startActivity(intent)
+                            finish()
                         } else {
                             Log.w(TAG, "Gagal Update Profile", task.exception)
                             Toast.makeText(baseContext, "Gagal mengubah data profile", Toast.LENGTH_SHORT,).show()

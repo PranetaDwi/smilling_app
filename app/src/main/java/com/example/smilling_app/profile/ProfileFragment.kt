@@ -19,7 +19,6 @@ class ProfileFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var prefManager: PrefManager
 
-    // inisiasi firestore
     private val firestore = FirebaseFirestore.getInstance()
     private val userDataCollectionRef = firestore.collection("userDatas")
 
@@ -54,8 +53,11 @@ class ProfileFragment : Fragment() {
 
             if (userReferenceId.isNotBlank()){
                 val userDataDocumentRef = userDataCollectionRef.document(userReferenceId)
-                userDataDocumentRef.get().addOnSuccessListener { documentSnapshot ->
-                    if (documentSnapshot.exists()){
+                userDataDocumentRef.addSnapshotListener { documentSnapshot, e ->
+                    if (e != null) {
+                        return@addSnapshotListener
+                    }
+                    if (documentSnapshot != null && documentSnapshot.exists()) {
                         nameProfile.text = documentSnapshot.getString("name")
                         phoneProfile.text = documentSnapshot.getString("phone")
                         expandProfile.text = documentSnapshot.getString("expand")

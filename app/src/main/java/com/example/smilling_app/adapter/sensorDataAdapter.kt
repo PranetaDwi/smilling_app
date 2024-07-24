@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.smilling_app.databinding.ItemSensorDataBinding
 import com.example.smilling_app.firebase.SensorDatas
 
-class SensorDataAdapter(private val listSensorDatas: List<SensorDatas>) : RecyclerView.Adapter<SensorDataAdapter.ItemSensorDataViewHolder>() {
+class SensorDataAdapter(private val listSensorDatas: List<SensorDatas>, var onSelectedClick: (SensorDatas) -> Unit) : RecyclerView.Adapter<SensorDataAdapter.ItemSensorDataViewHolder>() {
 
     inner class ItemSensorDataViewHolder(private val binding: ItemSensorDataBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bindItem(data: SensorDatas) {
@@ -37,6 +37,11 @@ class SensorDataAdapter(private val listSensorDatas: List<SensorDatas>) : Recycl
     override fun onBindViewHolder(holder: ItemSensorDataViewHolder, position: Int) {
         val currentItem = listSensorDatas[position]
         holder.bindItem(currentItem)
+
+        holder.itemView.setOnClickListener{
+            val onSelectedClick = listSensorDatas[position]
+            onSelectedClick(onSelectedClick)
+        }
         Log.i("SensorDataAdapter", "Binding item at position: $position")
     }
 }

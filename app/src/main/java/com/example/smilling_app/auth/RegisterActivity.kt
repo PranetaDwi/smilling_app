@@ -64,7 +64,7 @@ class RegisterActivity : AppCompatActivity() {
                                     .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
 
                                 Toast.makeText(baseContext, "Berhasil Mendaftarkan Akun", Toast.LENGTH_SHORT,).show()
-                                startActivity(Intent(this@RegisterActivity, FragmentActivity::class.java))
+                                startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
                             } else {
                                 Log.w(TAG, "createUserWithEmail:failure", task.exception)
                                 Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT,).show()

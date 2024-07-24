@@ -107,6 +107,6 @@ class HasilRekomendasiActivity : AppCompatActivity() {
                     Log.w("MainActivity", "loadPost:onCancelled", error.toException())
                 }
             }
-            )
+        )
     }
 }
