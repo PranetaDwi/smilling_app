@@ -10,6 +10,7 @@ import com.example.smilling_app.PrefManager
 import com.example.smilling_app.auth.LoginActivity
 import com.example.smilling_app.databinding.FragmentProfileBinding
 import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -21,6 +22,7 @@ class ProfileFragment : Fragment() {
 
     private val firestore = FirebaseFirestore.getInstance()
     private val userDataCollectionRef = firestore.collection("userDatas")
+    private lateinit var auth : FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +36,7 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         prefManager = PrefManager.getInstance(requireContext())
+        auth = FirebaseAuth.getInstance()
 
         with (binding){
             logoutButton.setOnClickListener{
@@ -50,6 +53,7 @@ class ProfileFragment : Fragment() {
             }
 
             val userReferenceId = prefManager.getUserId()
+            val user = auth.currentUser
 
             if (userReferenceId.isNotBlank()){
                 val userDataDocumentRef = userDataCollectionRef.document(userReferenceId)
@@ -59,6 +63,7 @@ class ProfileFragment : Fragment() {
                     }
                     if (documentSnapshot != null && documentSnapshot.exists()) {
                         nameProfile.text = documentSnapshot.getString("name")
+                        emailProfile.text = user?.email
                         phoneProfile.text = documentSnapshot.getString("phone")
                         expandProfile.text = documentSnapshot.getString("expand")
                         addressProfile.text = documentSnapshot.getString("address")

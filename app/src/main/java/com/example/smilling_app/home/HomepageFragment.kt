@@ -60,6 +60,7 @@ class HomepageFragment : Fragment() {
                 userDataDocumentRef.get().addOnSuccessListener { documentSnapshot ->
                     if (documentSnapshot.exists()){
                         deviceNameText.text = documentSnapshot.getString("deviceName")
+                        userName.text = documentSnapshot.getString("name")
                     }
                 }
             }
