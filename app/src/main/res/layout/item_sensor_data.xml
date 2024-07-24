@@ -333,7 +333,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Kelembaban"
+                                android:text="Temperature"
                                 android:textSize="12sp"
                                 android:layout_marginLeft="5dp"
                                 android:fontFamily="@font/poppins_semi_bold"
@@ -352,7 +352,7 @@
                             android:background="@color/white">
 
                             <TextView
-                                android:id="@+id/dataKelembaban"
+                                android:id="@+id/dataTemperature"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="90"
@@ -364,7 +364,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="ppm"
+                                android:text="C"
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginLeft="5dp"
                                 android:fontFamily="@font/poppins_bold"/>

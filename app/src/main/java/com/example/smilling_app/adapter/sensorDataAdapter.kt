@@ -19,7 +19,7 @@ class SensorDataAdapter(private val listSensorDatas: List<SensorDatas>, var onSe
                 dataFosfor.text = data.P.toString()
                 dataPh.text = data.pH.toString()
                 dataKalium.text = data.K.toString()
-                dataKelembaban.text = data.Moist.toString()
+                dataTemperature.text = data.Temp.toString()
                 tanggalCek.text = dateSensor
                 waktuCek.text = timeSensor
                 Log.i("SensorDataAdapter", "Binding data: $data")
