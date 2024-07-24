@@ -20,6 +20,11 @@ class historyAdapter(private val listHistories: List<Histories>) : RecyclerView.
                 hasilKadarPupuk.text = data.kadar.toString()
                 tanggalCek.text = dateSensor
                 waktuCek.text = timeSensor
+                dataNitrogen.text = data.N.toString()
+                dataFosfor.text = data.P.toString()
+                dataKalium.text = data.K.toString()
+                dataPh.text = data.pH.toString()
+                dataTemperature.text = data.Temp.toString()
                 Log.i("SensorDataAdapter", "Binding data: $data")
             }
         }

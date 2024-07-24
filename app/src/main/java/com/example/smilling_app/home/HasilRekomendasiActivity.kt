@@ -69,8 +69,8 @@ class HasilRekomendasiActivity : AppCompatActivity() {
             N = nValue.toDouble(),
             P = pValue.toDouble(),
             K = kValue.toDouble(),
-            pH = phValue.toDouble(),
-            Temp = tempValue.toDouble(),
+            pH = String.format("%.2f", phValue).toDouble(),
+            Temp = String.format("%.2f", tempValue).toDouble(),
             kadar = String.format("%.2f", prediction).toDouble(),
             Waktu = formattedDate
         )
@@ -84,6 +84,11 @@ class HasilRekomendasiActivity : AppCompatActivity() {
             }
 
         with(binding) {
+            dataNitrogen.text = nValue.toString()
+            dataFosfor.text = pValue.toString()
+            dataKalium.text = kValue.toString()
+            dataPh.text = phValue.toString()
+            dataTemperature.text = tempValue.toString()
             hasilKadar.text = String.format("%.2f", prediction)
             backButton.setOnClickListener {
                 startActivity(Intent(this@HasilRekomendasiActivity, PemilihanHistoryActivity::class.java))
